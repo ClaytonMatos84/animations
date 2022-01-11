@@ -1,0 +1,131 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* box */
+.box {
+    margin-top: 20px;
+    outline: 5px solid red;
+}
+
+.flag {
+    transform: translate(100px, 100px) scale(1.5) rotate(-15deg);
+}
+
+/* box2 */
+.box2 {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+
+    transition-property: background-color, border-radius;
+    transition-duration: 2s;
+    /* transition-delay: 1s; */
+    transition-timing-function: cubic-bezier(.15, .89, .85, .26);
+}
+
+.box2:hover {
+    background-color: #ec5840;
+    border-radius: 50%;
+}
+
+/* box3 */
+.box3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    background-image: url(./img/ceu-azul.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.airplane {
+    animation: fly 1.5s linear 1s infinite;
+    /* animation: fly 1s infinite; */
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(200%, -50px);
+    }
+    100% {
+        transform: translate(calc(100vw - 100px), 0);
+    }
+}
+
+/* box4 */
+.box4 {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 300% 300%;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    font-size: 300%;
+
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* box5 */
+.box5 {
+    overflow: hidden;
+    position: relative;
+}
+.box5::after {
+    animation: text-reveal 1s ease forwards;
+    background-color: #157bad;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.text-reveal {
+    animation: fade 1ms 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes text-reveal {
+    from {
+        transform: translateX(-101%);
+    }
+
+    to {
+        transform: translateX(101%);
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
