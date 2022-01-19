@@ -377,6 +377,7 @@ main.cards section.card.about {
 }
 
 .conteudo-menu {
+    min-width: 256px;
     flex-grow: 1;
     background: #07293a;
 }
@@ -551,6 +552,18 @@ main.cards section.card.about {
     align-self: flex-end;
 }
 
+.move-conteudo1,
+.move-conteudo3 {
+    margin-left: -800px;
+    transition: margin-left 2s;
+}
+
+.move-conteudo2,
+.move-conteudo4 {
+    margin-right: -800px;
+    transition: margin-right 2s;
+}
+
 .conteudo-img {
     width: 300px;
 }
@@ -567,4 +580,10 @@ main.cards section.card.about {
     background: #e7e5e5;
     border-radius: 10px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.conteudo-final {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
