@@ -7,11 +7,14 @@ function init() {
 
     function moveContent(element, index) {
         const property = (index % 2 == 0) ? 'marginLeft' : 'marginRight';
-        if (element.getBoundingClientRect().top > 0 &&
+        if (element.style[property] != '0px' &&
+            element.getBoundingClientRect().top > 0 &&
             ((element.getBoundingClientRect().top + 70) <= window.innerHeight)) {
             element.style[property] = '0';
-        } else if (element.getBoundingClientRect().bottom > 0 &&
-            ((element.getBoundingClientRect().bottom - (element.getBoundingClientRect().height + 140)) + element.getBoundingClientRect().height < 0)) {
+        } else if (element.style[property] != '-800px' &&
+            element.getBoundingClientRect().bottom > 0 &&
+            ((element.getBoundingClientRect().bottom - (element.getBoundingClientRect().height + 140)) + element.getBoundingClientRect().height < 0 ||
+            element.getBoundingClientRect().bottom >= (window.innerHeight + element.getBoundingClientRect().height - 80))) {
             element.style[property] = '-800px';
         }
     }
