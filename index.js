@@ -24,6 +24,9 @@ function init() {
             moveContent(element, index);
         });
     });
+
+    const actualYear = document.getElementById('anoAtual');
+    actualYear.textContent = new Date().getFullYear();
 }
 
 window.addEventListener('load', this.init);
