@@ -641,6 +641,39 @@ main.cards section.card.about {
     margin: 20px;
 }
 
+.grupo-ajuda-escrevendo h4 {
+    overflow: hidden;
+    border-right: 0.15em solid #07293a;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+
+    animation: typing 10s backwards linear infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    90% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #07293a;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
 .conteudo-final {
     display: flex;
     flex-wrap: wrap;
