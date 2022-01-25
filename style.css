@@ -445,7 +445,7 @@ main.cards section.card.about {
     display: inline-block;
     font-size: 8em;
 
-    animation: moveText 1.8s cubic-bezier(0.245, 0.325, 0.510, 1.305) infinite;
+    animation: moveText 1.8s cubic-bezier(0.245, 0.325, 0.51, 1.305) infinite;
 }
 
 @keyframes moveText {
@@ -565,7 +565,8 @@ main.cards section.card.about {
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.conteudo-aviso {
+.conteudo-aviso,
+.conteudo-ajuda {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -610,6 +611,34 @@ main.cards section.card.about {
     100% {
         order: 5;
     }
+}
+
+.grupo-ajuda {
+    display: flex;
+}
+
+.grupo-ajuda-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 400px;
+    height: 360px;
+    overflow: hidden;
+    transform: rotate(-4deg);
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+}
+
+.grupo-ajuda-content div:nth-child(2) {
+    display: none;
+}
+
+.grupo-ajuda-content p {
+    margin: 20px;
 }
 
 .conteudo-final {
