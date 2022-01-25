@@ -634,7 +634,8 @@ main.cards section.card.about {
 }
 
 .grupo-ajuda-content div:nth-child(2) {
-    display: none;
+    opacity: 0;
+    margin-top: -210px;
 }
 
 .grupo-ajuda-content p {
@@ -733,6 +734,8 @@ main.cards section.card.about {
     width: 200px;
     height: 200px;
     margin: 10px;
+
+    transition: opacity 4s;
 }
 
 .conteudo-img-middle img {
