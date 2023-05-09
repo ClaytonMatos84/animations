@@ -52,7 +52,7 @@ function init() {
     });
 
     const actualYear = document.getElementById('anoAtual');
-    actualYear.textContent = new Date().getFullYear();
+    if (actualYear) actualYear.textContent = new Date().getFullYear();
 }
 
 window.addEventListener('load', this.init);
