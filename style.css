@@ -576,41 +576,20 @@ main.cards section.card.about {
 
 .grupo-conteudo {
     display: flex;
+    animation: moveOrder infinite;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.grupo-conteudo div:nth-child(1) {
-    order: 1;
-
-    animation: moveOrder 6s infinite forwards;
-}
-
-.grupo-conteudo div:nth-child(2) {
-    order: 2;
-}
-
-.grupo-conteudo div:nth-child(3) {
-    order: 3;
-}
-
-.grupo-conteudo div:nth-child(4) {
-    order: 4;
-}
 
 @keyframes moveOrder {
     0% {
-        order: 1;
-    }
-
-    30% {
-        order: 2;
-    }
-
-    60% {
-        order: 3;
+       transform: translateX(-20%);
     }
 
     100% {
-        order: 5;
+        transform: translateX(0%);
     }
 }
 
