@@ -361,16 +361,20 @@ main.cards section.card.about {
 
 /* box6 */
 .box6 {
-    background: #23a5d55e;
+    position: absolute;
+    background: linear-gradient(to right, #0d1fc2ec, #010b1b75);
     width: 100%;
 }
 
 .conteudo-header {
     display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
     background: #000;
     color: #ffffff;
     padding: 0;
+    z-index: 2;
 }
 
 .conteudo-pagina {
@@ -378,9 +382,12 @@ main.cards section.card.about {
 }
 
 .conteudo-menu {
-    min-width: 200px;
-    flex-grow: 1;
+    position: fixed;
+    top: 68px;
+    width: 14%;
+    height: 100%;
     background: #07293a;
+    z-index: 2;
 }
 
 .conteudo-menu ul {
@@ -410,8 +417,10 @@ main.cards section.card.about {
 }
 
 .conteudos {
-    flex-grow: 3;
+    position: relative;
     overflow: hidden;
+    width: 86%;
+    margin-left: 14%;
 }
 
 .conteudo-principal {
@@ -445,8 +454,41 @@ main.cards section.card.about {
 .texto-principal {
     display: inline-block;
     font-size: 8em;
+}
 
-    animation: moveText 1.8s cubic-bezier(0.245, 0.325, 0.51, 1.305) infinite;
+.texto-principal1 {
+    color: orange;
+    transform: rotate(-10deg);
+}
+
+.texto-principal2 {
+    color: coral;
+    transform: translateY(-25px) rotate(-10deg);
+}
+
+.texto-principal3 {
+    color: darksalmon;
+    transform: translateY(-45px) rotate(-10deg);
+}
+
+.texto-principal4 {
+    color: indianred;
+    transform: translateY(-55px);
+}
+
+.texto-principal5 {
+    color: lightcoral;
+    transform: translateY(-45px) rotate(10deg);
+}
+
+.texto-principal6 {
+    color: lightgrey;
+    transform: translateY(-25px) rotate(10deg);
+}
+
+.texto-principal7 {
+    color: lightcyan;
+    transform: rotate(10deg);
 }
 
 @keyframes moveText {
@@ -465,40 +507,6 @@ main.cards section.card.about {
     80% {
         transform: translateY(0px);
     }
-}
-
-.texto-principal1 {
-    color: orange;
-}
-
-.texto-principal2 {
-    color: coral;
-    animation-delay: 0.6s;
-}
-
-.texto-principal3 {
-    color: darksalmon;
-    animation-delay: 0.7s;
-}
-
-.texto-principal4 {
-    color: indianred;
-    animation-delay: 0.5s;
-}
-
-.texto-principal5 {
-    color: lightcoral;
-    animation-delay: 0.8s;
-}
-
-.texto-principal6 {
-    color: lightgrey;
-    animation-delay: 0.3s;
-}
-
-.texto-principal7 {
-    color: lightcyan;
-    animation-delay: 0.8s;
 }
 
 .conteudo-1,
@@ -726,6 +734,8 @@ main.cards section.card.about {
 .conteudo-footer {
     display: flex;
     justify-content: center;
+    width: 86%;
+    margin-left: 14%;
     background: #000;
     color: #ffffff;
     padding: 0;
@@ -815,6 +825,12 @@ main.cards section.card.about {
 
     .conteudo-menu {
         display: none;
+    }
+
+    .conteudos,
+    .conteudo-footer {
+        width: 100%;
+        margin-left: 0%;
     }
 }
 

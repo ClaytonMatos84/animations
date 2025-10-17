@@ -13,8 +13,8 @@ function init() {
             element.style[property] = '0';
         } else if (element.style[property] != '-800px' &&
             element.getBoundingClientRect().bottom > 0 &&
-            ((element.getBoundingClientRect().bottom - (element.getBoundingClientRect().height + 140)) + element.getBoundingClientRect().height < 0 ||
-                element.getBoundingClientRect().bottom >= (window.innerHeight + element.getBoundingClientRect().height - 80))) {
+            ((element.getBoundingClientRect().bottom - (element.getBoundingClientRect().height + 260)) + element.getBoundingClientRect().height < 0 ||
+                element.getBoundingClientRect().bottom >= (window.innerHeight + element.getBoundingClientRect().height - 200))) {
             element.style[property] = '-800px';
         }
     }
@@ -33,7 +33,7 @@ function init() {
             imgHelper3.style.opacity = '0';
             imgHelper4.style.opacity = '1';
         } else if ((imgHelper1.style.opacity != 1 || imgHelper1.style.opacity == '') &&
-            (imgHelper1.getBoundingClientRect().top > 350 || imgHelper1.getBoundingClientRect().top <= 20)) {
+            (imgHelper1.getBoundingClientRect().top > 400 || imgHelper1.getBoundingClientRect().top <= 50)) {
             imgHelper1.style.opacity = '1';
             imgHelper2.style.opacity = '0';
 
@@ -42,17 +42,22 @@ function init() {
         }
     }
 
-
-    window.addEventListener('scroll', () => {
+    function executeAnimations() {
         arrayElements.forEach((element, index) => {
             moveContent(element, index);
         });
 
         hiddenHelperImg();
+    }
+
+
+    window.addEventListener('scroll', () => {
+        executeAnimations();
     });
 
     const actualYear = document.getElementById('anoAtual');
     if (actualYear) actualYear.textContent = new Date().getFullYear();
+    executeAnimations();
 }
 
 window.addEventListener('load', this.init);
