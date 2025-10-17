@@ -1,0 +1,76 @@
+/* effect */
+.container-effect {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: wrap;
+    z-index: 1;
+}
+
+.container-effect .card-effect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(72, 38, 38, 0.1);
+    overflow: hidden;
+}
+
+.container-effect .card-effect:hover {
+    animation: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.container-effect .card-effect .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container-effect .card-effect:hover .content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.container-effect .card-effect .content h2 {
+    position: absolute;
+    top: -125px;
+    right: 13px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+.container-effect .card-effect .content h3 {
+    font-size: 1.8em;
+    z-index: 1;
+}
+
+.container-effect .card-effect .content p {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.container-effect .card-effect .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
